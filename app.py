@@ -2,8 +2,7 @@
 import streamlit as st
 
 def main():
-    st.title("Automated EDA and Modeling App")
-
+    st.title("🔮 DataDazzler: Your Automated EDA and Model Builder 🔮")
     st.sidebar.title("Navigation")
     page = st.sidebar.radio("Go to", ("Upload Data", "Preprocessing", "Modeling", "Download Model"))
 
