@@ -22,10 +22,13 @@ def upload_data_page():
     # Create a file uploader
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
-    df = pd.read_csv(uploaded_file)
-
-    # Display the uploaded dataframe
-    st.write(df.head(10))
+    # Check if a file has been uploaded
+    if uploaded_file is not None:
+        # Read the file
+        df = pd.read_csv(uploaded_file)
+        
+        # Display the uploaded dataframe
+        st.write(df.head(10))
 
 def preprocessing_page():
     st.header("Preprocessing")
