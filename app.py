@@ -23,8 +23,8 @@ def upload_data_page():
 
     # Check if a file has been uploaded
     if uploaded_file is not None:
-    # Read the file
-    df = pd.read_csv(uploaded_file)
+        # Read the file
+        df = pd.read_csv(uploaded_file)
 
     # Display the uploaded dataframe
     st.write(df)
