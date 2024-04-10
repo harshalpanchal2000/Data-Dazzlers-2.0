@@ -17,7 +17,17 @@ def main():
 
 def upload_data_page():
     st.header("Upload Data")
-    st.write("This is the page where users can upload their dataset.")
+    
+    # Create a file uploader
+    uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+    # Check if a file has been uploaded
+    if uploaded_file is not None:
+    # Read the file
+    df = pd.read_csv(uploaded_file)
+
+    # Display the uploaded dataframe
+    st.write(df)
 
 def preprocessing_page():
     st.header("Preprocessing")
